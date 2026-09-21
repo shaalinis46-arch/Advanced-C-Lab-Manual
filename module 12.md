@@ -15,11 +15,27 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+struct Node   
+{  
+float data;  
+struct Node *next;  
+}*head;  
+void display()  
+{ 
+    struct Node *current=head;
+    while(current!=NULL)
+    {
+        printf("%.2f\n",current->data);
+        current=current->next;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="776" height="825" alt="image" src="https://github.com/user-attachments/assets/681e48bd-324d-4d41-ab41-7da59b9ca6f4" />
+
 
 
 Result:
@@ -40,11 +56,28 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+struct Node   
+{  
+float data;  
+struct Node *next;  
+}*head;  
+void pop()  
+{ 
+    if(head!=0)
+    {
+        head=head->next;
+    }
+    else
+    {
+        printf("stack is empty");
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="848" height="475" alt="image" src="https://github.com/user-attachments/assets/43767457-9ce8-4c7f-8e1f-bd54e710c661" />
 
 
 
@@ -64,11 +97,36 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void display()
+{
+ struct Node *current=front;
+ if(current==NULL)
+ {
+     printf("queue is empty");
+ }
+ else
+ {
+ printf("queue elements:\n");
+ while(current!=NULL)
+{
+    
+   printf("%c\n",current->data);
+   current=current->next;
+}
+}
+}
+```
 
 Output:
 
-//paste your output here
+<img width="831" height="806" alt="image" src="https://github.com/user-attachments/assets/da84be8e-b2bd-428b-b9d0-704e1bd2c136" />
+
 
 Result:
 Thus, the program to display queue elements using linked list is verified successfully.
@@ -90,11 +148,35 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+struct Node
+{
+   int data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void enqueue(int data)
+{
+    struct Node *current = (struct Node*)malloc(sizeof(struct Node));
+    current->data = data;
+    current->next = NULL;
+
+    if (front == NULL)
+    {
+        front = rear = current;
+    }
+    else
+    {
+        rear->next = current;
+        rear = current;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+
+<img width="827" height="803" alt="image" src="https://github.com/user-attachments/assets/9544c01b-fa7d-4ec6-b683-d4a4f252df4a" />
+
 
 Result:
 Thus, the program to insert elements in queue using linked list is verified successfully.
@@ -117,11 +199,28 @@ o	If the queue is not empty, return the data stored in the front node of the lin
 
 Program:
 
-//type your code here
+```
+struct Node
+{
+   float data;
+   struct Node *next;
+}*front=NULL,*rear=NULL;
+void peek()
+{
+    if(front==NULL)
+    {
+        printf("queue is empty");
+    }
+    else
+    {
+        printf("%.2f",front->data);
+    }
+}
+```
 
 Output:
 
-//paste your output here
+<img width="660" height="841" alt="image" src="https://github.com/user-attachments/assets/1a1737a2-6a97-4db6-bfa8-ff87a7bf987a" />
 
 
 
